@@ -20,6 +20,8 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import imgEdit from '../../assets/images/edit.svg';
 import imgDelete from '../../assets/images/delete.svg';
 import imgKey from '../../assets/images/fxemoji_key.svg';
+import viewIcon from '../../assets/images/view.svg';
+import pdfIcon from '../../assets/images/pdf.svg';
 
 
 import $ from 'jquery';
@@ -132,23 +134,29 @@ export default function Sales() {
                                     <tbody>
                                         {salesData.map((row) => (
                                             <tr key={row.Date}>
-                                                <td>{row.Date}</td>
-                                                <td>{row.ClosingDate}</td>
-                                                <td>{row.agent}</td>
-                                                <td>{row.mls}</td>
-                                                <td>  {row.propertyAddress}</td>
-                                                <td align="center">{row.salePrice}</td>
-                                                <td align="center">{row.otherAgentCommValue}</td>
-                                                <td align="center">{row.rebateBuyeSeller}</td>
-                                                <td align="center">{row.transactionFee}</td>
-                                                <td align="center">{row.agentNetCommission}</td>
-                                                <td align="center">
+                                                <td className="align-middle">{row.Date}</td>
+                                                <td className="align-middle">{row.ClosingDate}</td>
+                                                <td className="align-middle">{row.agent}</td>
+                                                <td className="align-middle">{row.mls}</td>
+                                                <td className="align-middle">  {row.propertyAddress}</td>
+                                                <td className="align-middle" align="center">{row.salePrice}</td>
+                                                <td className="align-middle" align="center">{row.otherAgentCommValue}</td>
+                                                <td className="align-middle" align="center">{row.rebateBuyeSeller}</td>
+                                                <td className="align-middle" align="center">{row.transactionFee}</td>
+                                                <td className="align-middle" align="center">{row.agentNetCommission}</td>
+                                                <td className="align-middle" align="center">
                                                     <div className="d-flex justify-content-center">
+                                                        <button className="bg-transprent">
+                                                            <img src={viewIcon} />
+                                                        </button>
                                                         <button className="bg-transprent">
                                                             <img src={imgEdit} />
                                                         </button>
                                                         <button className="bg-transprent" onClick={handleClickOpen}>
                                                             <img src={imgDelete} />
+                                                        </button>
+                                                        <button className="bg-transprent">
+                                                            <img src={pdfIcon}  />
                                                         </button>
                                                     </div>
                                                 </td>
