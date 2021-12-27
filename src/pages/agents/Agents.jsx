@@ -32,6 +32,7 @@ const Agents = () => {
                 <div className="container-fluid">
                     <div className="row align-items-center">
                         <div className="col-sm-9">
+                        <span className="pageHeading">All Agents</span>
                             <Stack spacing={1}>
                                 <Breadcrumbs  separator={<NavigateNextIcon fontSize="small" />}  aria-label="breadcrumb">
                                     {breadcrumbs}

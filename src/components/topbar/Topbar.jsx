@@ -8,7 +8,7 @@ export default function Topbar() {
            <div className="row align-items-center">
                <div className="col-md-6">
                    <div className="page-title text-center text-md-start">
-                    <h3>Dashboard</h3>
+                    <span>Agent Name</span>
                    </div>
                </div>
                <div className="col-md-6">

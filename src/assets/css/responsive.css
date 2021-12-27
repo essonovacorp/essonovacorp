@@ -5,7 +5,7 @@
 @media (max-width: 767.98px) { 
     .sidenav{position: absolute;left: -154px;z-index: 10;}
     .rightSideContent{width: 100vw;}
-    .dashboardCantainer{padding: 0 1rem;}
+    .dashboardCantainer{padding:1rem;}
     .no-x-padding{padding: 0px; margin-bottom: 15px;}
     .chartContainer{
         width: 100%;

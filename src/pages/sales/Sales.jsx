@@ -82,6 +82,7 @@ export default function Sales() {
                 <div className="container-fluid">
                     <div className="row align-items-center">
                         <div className="col-sm-9">
+                        <span className="pageHeading">Sales</span>
                             <Stack spacing={1}>
                                 <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
                                     {breadcrumbs}
@@ -147,16 +148,16 @@ export default function Sales() {
                                                 <td className="align-middle" align="center">
                                                     <div className="d-flex justify-content-center">
                                                         <button className="bg-transprent">
-                                                            <img src={viewIcon} />
+                                                            <img src={viewIcon} alt=""/>
                                                         </button>
                                                         <button className="bg-transprent">
-                                                            <img src={imgEdit} />
+                                                            <img src={imgEdit} alt=""/>
                                                         </button>
                                                         <button className="bg-transprent" onClick={handleClickOpen}>
-                                                            <img src={imgDelete} />
+                                                            <img src={imgDelete} alt=""/>
                                                         </button>
                                                         <button className="bg-transprent">
-                                                            <img src={pdfIcon}  />
+                                                            <img src={pdfIcon}  alt=""/>
                                                         </button>
                                                     </div>
                                                 </td>

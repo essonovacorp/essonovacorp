@@ -83,7 +83,8 @@ a:hover{
 }
 
 .appWarpper-body{
-    background-color: #F9F9FD;
+    /* background-color: #F9F9FD; */
+    background-color: rgb(247, 247, 250);
     overflow-x: hidden;
 }
 /* Sidenav */
@@ -209,10 +210,21 @@ a:hover{
     padding: 15px 20px;
     z-index: 999;
 }
-.topbar .page-title h3{
-    font-style: 26px;
+.topbar .page-title span{
+    font-size: 26px;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    line-height: 3.75rem;
+        text-align: left;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        text-fill-color: transparent !important;
+        background: -webkit-linear-gradient(
+    90deg, rgb(232, 88, 26) 15.923566878980886%, rgb(245, 58, 139) 50.63694267515923%, rgba(26, 46, 76, 1) 99.68152866242038%);
+        background: linear-gradient(
+    90deg, rgb(232, 88, 26) 15.923566878980886%, rgb(245, 58, 139) 50.63694267515923%, rgba(26, 46, 76, 1) 99.68152866242038%);
+    
 }
 .topbar .topbarUserLogin h5{
     line-height: 1;
@@ -304,6 +316,10 @@ overflow: visible;
     content: url(../images/topbar-agent/logout_blue.svg);
 }
 /* End TopBar */
+.allContainer{
+    padding: 25px 15px;
+    background-color: #ffffff;
+}
 /* Feacherinfo */
 .freacherInfoConterner,
 .dashboardCantainer{
@@ -314,10 +330,62 @@ overflow: visible;
 .agentActivity{
     padding: 25px 15px;
     background-color: #ffffff;
+    border-radius: 6px;
+}
+.pageTitle{
+    background-color: #ffffff;
+    padding: 20px 15px;
+    border-radius: 6px;
+    margin-bottom: 1.8rem;
+        box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+}
+
+.pageTitle h3{
+    font-size: 20px;
+}
+.pageHeading{
+    font-size: 20px;
+    position: relative;
+    font-weight: bold;
+}
+.pageHeading::before{
+    content: '';
+    width: 6px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    right: -23px;
+    top: calc(50%);
+    z-index: 2;
+}
+.pageHeading::after{
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: rgb(232, 88, 26);
+    position: absolute;
+    right: -60px;
+    top: calc(50%);
 }
 .feacherInfo{
     background-color: #ffffff;
     padding: 30px;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+}
+.infoIcon{
+    background-color:rgba(11, 53, 113, 1) ;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+}
+.infoIcon svg{
+    font-size: 3rem;
 }
 .feacherInfo h3{
     font-size: 16px;
@@ -339,8 +407,9 @@ color: #232D42;
 }
 /* Dashboard Chart */
 .dashboardCantainer{
-    background-color: #ffffff
-
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+    border-radius: 6px;
 }
 .dashboardChart{
     background-color: #ffffff;
@@ -387,7 +456,7 @@ color: #8A92A6;
 /* All Agents */
 .allAgentsContatiner{
     background-color: #ffffff;
-    padding: 25px 15px;
+    padding: 15px 10px 25px 10px;
 }
 .agentForm{
     padding: 30px 0 80px;
@@ -504,6 +573,7 @@ margin: 2rem 0 1rem;
 .addAgentsContatiner .rs-input-group{
     border: 1.5px solid #C7C7C7;
 }
+
 /* Datatable */
 .dataTables_wrapper .dataTables_paginate .paginate_button{
 padding: 8px 15px !important;
@@ -523,6 +593,12 @@ padding: 8px 15px !important;
     padding: 8px 15px !important;
 }
 
+.rs-table-row .rs-table-cell{
+    background: #ffffff;
+  }
+  .rs-table-row:nth-of-type(even) .rs-table-cell{
+    background: rgb(235, 245, 252);
+  }
 /* Staper */
 .MuiStep-root .Mui-completed > span,
 .css-z7uhs0-MuiStepConnector-line{

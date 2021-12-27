@@ -28,13 +28,13 @@ export default function Sidenav() {
                    </li>
                    <li>
                        <a href="#" className="nav_icon nav_sales">
-                           rent
+                           Rent
                        </a>
                    </li>
                    <li>
-                       <a href="#" className="nav_icon nav_commission">
-                           commission
-                       </a>
+                       <NavLink   activeClassName={"active"} to="/commission" className="nav_icon nav_commission">
+                        Commission
+                       </NavLink>
                    </li>
                    <li>
                        <a href="#" className="nav_icon nav_sales_summary">

@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidenav from '../sidenav/Sidenav';
-import Topbar from '../topbar/Topbar';
+import Sidenav from '../sideNav/Sidenav';
+import Topbar from '../topBar/Topbar';
 
 import Routes from '../Routes';
 import { BrowserRouter, Route } from 'react-router-dom';
