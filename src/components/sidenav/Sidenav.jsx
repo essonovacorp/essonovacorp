@@ -37,12 +37,12 @@ export default function Sidenav() {
                        </NavLink>
                    </li>
                    <li>
-                       <a href="#" className="nav_icon nav_sales_summary">
+                   <NavLink   activeClassName={"active"} to="/sale-summary" className="nav_icon nav_sales_summary">
                        SALE SUMMARY
-                       </a>
+                       </NavLink>
                    </li>
                    <li>
-                       <a href="#" className="nav_icon nav_sales_summary">
+                        <a href="" className="nav_icon nav_sales_summary">
                        RENT SUMMARY
                        </a>
                    </li>

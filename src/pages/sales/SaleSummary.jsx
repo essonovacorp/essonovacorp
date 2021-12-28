@@ -1,9 +1,11 @@
+
 import React, { useState } from "react";
 import { Breadcrumbs, Typography, Link, Stack } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import CommissionTable from "../../components/commissionTable/CommissionTable";
+import SaleSummaryTable from "../../components/saleSummaryTable/SaleSummaryTable";
 
-export default function Commission() {
+
+export default function SaleSummary() {
     const breadcrumbs = [
         <Link underline="hover" key="1" color="inherit" href="/">
             Dashboard
@@ -18,17 +20,17 @@ export default function Commission() {
         //   Core
         // </Link>,
         <Typography key="2" color="text.primary">
-            Commission
+            Sale Summary
         </Typography>,
     ];
     return (
         <div>
                    
-             <div className="allAgentsContatiner">
+                   <div className="allAgentsContatiner">
                 <div className="container-fluid">
                      <div className="row">
                         <div className="col">
-                            <span className="pageHeading">Commission</span><br/>
+                            <span className="pageHeading">Commission Disbursement Authorization Summary</span><br/>
                             <Stack spacing={1} className="bg-transprent mt-2">
                                 <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
                                     {breadcrumbs}
@@ -38,13 +40,17 @@ export default function Commission() {
                     </div>
                     <div className="row">
                         <div className="col-md-12">
-                            <CommissionTable/>
+                           <SaleSummaryTable/>
                         </div>
                     </div>
                    
                 </div>
             </div>
          
+            
         </div>
     )
 }
+
+
+

@@ -599,6 +599,20 @@ padding: 8px 15px !important;
   .rs-table-row:nth-of-type(even) .rs-table-cell{
     background: rgb(235, 245, 252);
   }
+  .rs-table-cell-header .rs-table-cell-content {
+    padding: 10px;
+    line-height: 1.66666667;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rs-table-word-wrap .rs-table-cell-content {
+    white-space: pre-line !important;
+    word-wrap: break-word;
+}
 /* Staper */
 .MuiStep-root .Mui-completed > span,
 .css-z7uhs0-MuiStepConnector-line{

@@ -234,15 +234,49 @@ export const selectData = [
 ];
 
 export const  commissionData = [
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  { date: '12/21/2021', agent: 'John Doe', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
-  ]
+  { date: '12/21/2021', agent: 'John Doe 1', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  { date: '12/21/2021', agent: 'John Doe 2', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  { date: '12/21/2021', agent: 'John Doe 3', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  { date: '12/21/2021', agent: 'John Doe 4', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  { date: '12/21/2021', agent: 'John Doe 5', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  { date: '12/21/2021', agent: 'John Doe 6', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  { date: '12/21/2021', agent: 'John Doe 7', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  { date: '12/21/2021', agent: 'John Doe 8', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  { date: '12/21/2021', agent: 'John Doe 9', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  { date: '12/21/2021', agent: 'John Doe 10', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  { date: '12/21/2021', agent: 'John Doe 11', address: 'Street Name, City, State, Country', salePrice: '$2,300,000.00', totalCommission: '$115,000.00', transactionFee: '$2,000.00', netPayment: '$90,000.00' },
+  ];
+
+
+  export const  salesSummary = [
+    { 
+      date: '12/21/2021', 
+      closingDate :'12/21/2021', 
+      agent:'John Deo',
+      MLS:888888888, 
+      salePrice: '$23,000.00',
+      otherAgentCommValue:'$0.00',
+      rebateBuyerSeller:'$0.00',
+      transactionFee: '$2,000.00',
+      agentNetCommission: '$90,000.00'},
+    { 
+      date: '12/21/2021', 
+      closingDate :'12/21/2021', 
+      agent:'John Deo',
+      MLS:888888888, 
+      salePrice: '$23,000.00',
+      otherAgentCommValue:'$0.00',
+      rebateBuyerSeller:'$0.00',
+      transactionFee: '$2,000.00',
+      agentNetCommission: '$90,000.00'},
+    { 
+      date: '12/21/2021', 
+      closingDate :'12/21/2021', 
+      agent:'John Deo',
+      MLS:888888888, 
+      salePrice: '$23,000.00',
+      otherAgentCommValue:'$0.00',
+      rebateBuyerSeller:'$0.00',
+      transactionFee: '$2,000.00',
+      agentNetCommission: '$90,000.00'},
+    ];

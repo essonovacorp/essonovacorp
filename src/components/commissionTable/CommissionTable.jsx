@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import { commissionData} from "../../DummyData"
-import { IconButton } from 'rsuite';
 import SearchIcon from '@mui/icons-material/Search';
 import iconPdf from '../../assets/images/pdf.svg';
 import { Table, Pagination } from 'rsuite';
-import { Input, InputGroup, MaskedInput } from 'rsuite';
+import { Input, InputGroup } from 'rsuite';
 
 const { Column, HeaderCell, Cell } = Table;
 
@@ -14,7 +13,9 @@ const ActionCell = ({ rowData, dataKey, ...props }) => {
     }
     return (
       <Cell {...props} className="link-group">
-          <img src={iconPdf} alt="" onClick={handleAction}  />
+          <button onClick={handleAction} className='bg-transprent' >
+            <img src={iconPdf} alt=""  />
+            </button>
       </Cell>
     );
   };
@@ -96,22 +97,22 @@ export default function CommissionTable() {
       onRowClick={data => {
         console.log(data);
       }}>
-        <Column width={80} align="center" fixed>
+        {/* <Column width={80} align="center" fixed>
           <HeaderCell>Id</HeaderCell>
           <Cell dataKey="id" />
-        </Column>
+        </Column> */}
 
         <Column width={120} fixed sortable>
           <HeaderCell>Date</HeaderCell>
           <Cell dataKey="date" />
         </Column>
 
-        <Column width={100} sortable>
+        <Column width={150} sortable>
           <HeaderCell>Agent</HeaderCell>
           <Cell dataKey="agent" />
         </Column>
 
-        <Column width={200} sortable>
+        <Column width={160} sortable>
           <HeaderCell>Address</HeaderCell>
           <Cell dataKey={"address"}/>
         </Column>
@@ -120,11 +121,11 @@ export default function CommissionTable() {
           <Cell dataKey="salePrice" />
         </Column>
         <Column width={100} flexGrow={1} sortable>
-            <HeaderCell>Total Commission</HeaderCell>
+            <HeaderCell>Total Comm.</HeaderCell>
             <Cell dataKey='totalCommission'/>
         </Column>
         <Column width={100} flexGrow={1} sortable>
-            <HeaderCell>Transaction Fee</HeaderCell>
+            <HeaderCell>Trans. Fee</HeaderCell>
             <Cell dataKey='transactionFee'/>
         </Column>
         <Column width={100} flexGrow={1} sortable>
@@ -133,7 +134,19 @@ export default function CommissionTable() {
         </Column>
         <Column width={200} flexGrow={1}>
           <HeaderCell>Action</HeaderCell>
-          <ActionCell dataKey="id" />
+          <ActionCell dataKey="agent" />
+          {/* <Cell>
+          {rowData => {
+            function handleAction() {
+              alert(`id:${rowData.id}`);
+            }
+            return (
+              <span>
+                <a onClick={handleAction}> Edit </a> | <a onClick={handleAction}> Remove </a>
+              </span>
+            );
+          }}
+        </Cell> */}
 
         </Column>
       </Table>

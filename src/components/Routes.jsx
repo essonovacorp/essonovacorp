@@ -4,6 +4,7 @@ import Agents from "../pages/agents/Agents";
 import Commission from "../pages/commission/Commission";
 import Dashboard from '../pages/dashboard/Dashboard';
 import Sales from "../pages/sales/Sales";
+import SaleSummary from "../pages/sales/SaleSummary";
 import Addsales from "./addSales/Addsales";
 
 const Routes = () => {
@@ -23,6 +24,9 @@ const Routes = () => {
             </Route>
             <Route path="/commission">
                 <Commission/>
+            </Route>
+            <Route path="/sale-summary">
+                <SaleSummary/>
             </Route>
         </Switch>
     )
