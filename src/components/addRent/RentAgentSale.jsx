@@ -1,9 +1,7 @@
 import { Input, InputGroup, MaskedInput, DatePicker } from 'rsuite';
 
-
-export default function AgentSale() {
+export default function RentAgentSale() {
     const instance = <DatePicker block />;
-
     return (
         <div>
             <form class="form-group">

@@ -1,5 +1,6 @@
 import { Input, InputGroup } from "rsuite"
-export default function FinalCalculations() {
+
+export default function RentOtherDetails() {
     const styles = {
         width: '100%',
         marginBottom: '1rem'
@@ -9,12 +10,12 @@ export default function FinalCalculations() {
             <form>
                 <div className="row align-items-center">
                     <div className="col-md-3">
-                        <label htmlFor="salePrice">Sale Price<sup className="text-danger">*</sup></label>
+                        <label htmlFor="rentPrice">Rent Price<sup className="text-danger">*</sup></label>
                     </div>
                     <div className="col-md-9">
                         <InputGroup inside style={styles} size="lg">
                             <InputGroup.Addon>$</InputGroup.Addon>
-                            <Input />
+                            <Input id="rentPrice" />
                             <InputGroup.Addon>.00</InputGroup.Addon>
                         </InputGroup>
                     </div>
@@ -22,7 +23,7 @@ export default function FinalCalculations() {
                 <hr />
                 <br />
                 <div className="row align-items-center">
-                <div className="col-md-3">
+                    <div className="col-md-3">
                         <label htmlFor="agentCommission" >Agent Commission<sup className="text-danger">*</sup></label>
                     </div>
                     <div className="col-md-9">
@@ -36,14 +37,19 @@ export default function FinalCalculations() {
                             <InputGroup.Addon>.00</InputGroup.Addon>
                         </InputGroup>
                     </div>
-                    <div className="col-md-12 text-end">
-                        <label className="pe-3">+</label>
                     </div>
+                <hr />
+                <br />
+                <div className="row align-items-center">
                     <div className="col-md-3">
-                        <label htmlFor="Bonus">Bonus<sup className="text-danger">*</sup></label>
+                        <label htmlFor="otherAgentCommission">Other Agent Commission<sup className="text-danger">*</sup></label>
                     </div>
                     <div className="col-md-9">
-                        <InputGroup inside style={styles} size="lg">
+                        <InputGroup style={styles} size="lg">
+                            <InputGroup.Addon>%</InputGroup.Addon>
+                            <Input id="otherAgentCommission" />
+                            <InputGroup.Addon>.00</InputGroup.Addon>
+                            <InputGroup.Addon className="bg-transprent">=</InputGroup.Addon>
                             <InputGroup.Addon>$</InputGroup.Addon>
                             <Input />
                             <InputGroup.Addon>.00</InputGroup.Addon>
@@ -54,7 +60,7 @@ export default function FinalCalculations() {
                 <br />
                 <div className="row">
                     <div className="col-md-6">
-                        <label htmlFor="">Rebate to Buyer / Seller<sup className="text-danger">*</sup></label>
+                        <label htmlFor="">Less Rebate to Buyer / Seller<sup className="text-danger">*</sup></label>
                         <InputGroup inside style={styles} size="lg">
                             <InputGroup.Addon>$</InputGroup.Addon>
                             <Input />
@@ -62,7 +68,7 @@ export default function FinalCalculations() {
                         </InputGroup>
                     </div>
                     <div className="col-md-6">
-                        <label htmlFor="">Referral Fee<sup className="text-danger">*</sup></label>
+                        <label htmlFor="">Less Referral Fee<sup className="text-danger">*</sup></label>
                         <InputGroup inside style={styles} size="lg">
                             <InputGroup.Addon>$</InputGroup.Addon>
                             <Input />
@@ -83,50 +89,7 @@ export default function FinalCalculations() {
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="">Monthly Office Fee</label>
-                        <InputGroup inside style={styles} size="lg"  disabled>
-                            <InputGroup.Addon>$</InputGroup.Addon>
-                            <Input />
-                            <InputGroup.Addon>.00</InputGroup.Addon>
-                        </InputGroup>
-                    </div>
-                    <div className="col-md-6">
-                        <label htmlFor="">%Transaction Fee or Each increment over $10,000.00 Transacation Fee</label>
-                        <InputGroup inside style={styles} size="lg"  disabled>
-                            <InputGroup.Addon>$</InputGroup.Addon>
-                            <Input />
-                            <InputGroup.Addon>.00</InputGroup.Addon>
-                        </InputGroup>
-                    </div>
-                </div>
-                <hr />
-                <br />
-                <div className="row">
-                    <div className="col-md-6">
-                        <label htmlFor="">Other</label>
-                        <InputGroup inside style={styles} size="lg">
-                            <InputGroup.Addon>$</InputGroup.Addon>
-                            <Input />
-                            <InputGroup.Addon>.00</InputGroup.Addon>
-                        </InputGroup>
-                    </div>
-                    <div className="col-md-6">
-                        <label htmlFor="">Agent Commission Without Transaction Fee</label>
-                        <InputGroup inside style={styles} size="lg">
-                            <InputGroup.Addon>$</InputGroup.Addon>
-                            <Input />
-                            <InputGroup.Addon>.00</InputGroup.Addon>
-                        </InputGroup>
-                    </div>                   
-                </div>
-                <hr />
-                <br />
-                <div className="row align-items-center mb-5">
-                    <div className="col-md-6 text-end">
-                        <label htmlFor="">Your Net</label>
-                        
-                    </div>
-                    <div className="col-md-6">
-                        <InputGroup inside style={styles} size="lg">
+                        <InputGroup inside style={styles} size="lg" disabled>
                             <InputGroup.Addon>$</InputGroup.Addon>
                             <Input />
                             <InputGroup.Addon>.00</InputGroup.Addon>
@@ -134,6 +97,48 @@ export default function FinalCalculations() {
                     </div>
                    
                 </div>
+                <hr />
+                <br />
+                <div className="row">
+                    <div className="col-md-6">
+                        <label htmlFor="other">Other</label>
+                        <InputGroup inside style={styles} size="lg">
+                            <InputGroup.Addon>$</InputGroup.Addon>
+                            <Input id="other"/>
+                            <InputGroup.Addon>.00</InputGroup.Addon>
+                        </InputGroup>
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="commission">Agent Commission Without Transaction Fee</label>
+                        <InputGroup inside style={styles} size="lg">
+                            <InputGroup.Addon>$</InputGroup.Addon>
+                            <Input id="commission" />
+                            <InputGroup.Addon>.00</InputGroup.Addon>
+                        </InputGroup>
+                    </div>
+                </div>
+                <hr />
+                <br />
+              
+                <div className="row">
+                    <div className="col-md-6">
+                        <label htmlFor="fee" >- %Transaction Fee or Flat Transacation Fee</label>
+                        <InputGroup inside style={styles} size="lg">
+                            <InputGroup.Addon>$</InputGroup.Addon>
+                            <Input id="fee"/>
+                            <InputGroup.Addon>.00</InputGroup.Addon>
+                        </InputGroup>
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="yourNet"><strong>Your Net</strong></label>
+                        <InputGroup inside style={styles} size="lg">
+                            <InputGroup.Addon>$</InputGroup.Addon>
+                            <Input id="yourNet"/>
+                            <InputGroup.Addon>.00</InputGroup.Addon>
+                        </InputGroup>
+                    </div>
+                </div>
+                
             </form>
         </div>
     )

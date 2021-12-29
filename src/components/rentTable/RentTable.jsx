@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
-import { salesSummary} from "../../DummyData"
+import { rentData} from "../../DummyData"
 import SearchIcon from '@mui/icons-material/Search';
 import iconPdf from '../../assets/images/pdf.svg';
-import { Input, InputGroup , Table, Pagination,DateRangePicker, Button } from 'rsuite';
+import { Table, Pagination } from 'rsuite';
+import { Input, InputGroup } from 'rsuite';
+import imgEdit from '../../assets/images/edit.svg';
+import imgDelete from '../../assets/images/delete.svg';
+import imgKey from '../../assets/images/fxemoji_key.svg';
+import viewIcon from '../../assets/images/view.svg';
 
 const { Column, HeaderCell, Cell } = Table;
 
@@ -12,16 +17,23 @@ const ActionCell = ({ rowData, dataKey, ...props }) => {
     }
     return (
       <Cell {...props} className="link-group">
-          <button onClick={handleAction} className='bg-transprent' >
+          <button className='bg-transprent' >
+            <img src={viewIcon} alt=""  />
+            </button>
+            <button className='bg-transprent' >
+            <img src={imgEdit} alt=""  />
+            </button>
+            <button className='bg-transprent' >
+            <img src={imgDelete} alt=""  />
+            </button>
+            <button onClick={handleAction} className='bg-transprent' >
             <img src={iconPdf} alt=""  />
             </button>
       </Cell>
     );
   };
 
-
-
-export default function SaleSummaryTable() {
+export default function RentTable() {
     const [sortColumn, setSortColumn] = React.useState();
     const [sortType, setSortType] = React.useState();
     const [loading, setLoading] = React.useState(false);
@@ -33,7 +45,7 @@ export default function SaleSummaryTable() {
       setLimit(dataKey);
     };
   
-    const data = salesSummary.filter((v, i) => {
+    const data = rentData.filter((v, i) => {
       const start = limit * (page - 1);
       const end = start + limit;
       return i >= start && i < end;
@@ -70,7 +82,7 @@ export default function SaleSummaryTable() {
       }, 500);
     };
     const styles = {
-      width: '500px',
+      width: 300,
       marginBottom: 10
     };
     const CustomInputGroupWidthButton = ({ placeholder, ...props }) => (
@@ -81,19 +93,11 @@ export default function SaleSummaryTable() {
         </InputGroup.Button>
       </InputGroup>
     );
-    const btnGoStyle = {
-      width:'100px'
-    };
     return (
         <>
         <div className="reactTable my-4">
-            <hr />
-            <div className="d-md-flex align-items-center text-center">
-                <strong>Select Date Range :</strong> <DateRangePicker showOneCalendar className='mx-2 my-2 my-md-0' />     
-                <Button appearance="primary" style={btnGoStyle}>Go</Button>
-
-            </div>
-            <hr />
+        <CustomInputGroupWidthButton size="md" placeholder="Search" />
+        <hr className='mb-0' />
           <Table 
                 wordWrap
       data={getData()}
@@ -136,21 +140,14 @@ export default function SaleSummaryTable() {
           <Cell dataKey="salePrice" />
         </Column>
         <Column width={150} flexGrow={1} sortable>
-            <HeaderCell>Agent Comm. Value</HeaderCell>
+            <HeaderCell>Net Commission <br/>Value</HeaderCell>
+            <Cell dataKey='netCommissionValue'/>
+        </Column>
+        <Column width={100} flexGrow={1} sortable>
+            <HeaderCell>Other Agent <br/>Comm. Value</HeaderCell>
             <Cell dataKey='otherAgentCommValue'/>
         </Column>
-        <Column width={100} flexGrow={1} sortable>
-            <HeaderCell>Rebate to buyer/seller</HeaderCell>
-            <Cell dataKey='rebateBuyerSeller'/>
-        </Column>
-        <Column width={100} flexGrow={1} sortable>
-            <HeaderCell>Trans. Fee</HeaderCell>
-            <Cell dataKey='transactionFee'/>
-        </Column>
-        <Column width={100} flexGrow={1} sortable>
-            <HeaderCell>Agent Net Comm.</HeaderCell>
-            <Cell dataKey='agentNetCommission'/>
-        </Column>
+       
        
         <Column width={200} flexGrow={1}>
           <HeaderCell>Action</HeaderCell>
@@ -169,7 +166,7 @@ export default function SaleSummaryTable() {
           maxButtons={5}
           size="xs"
           layout={['total', '-', 'limit', '|', 'pager', 'skip']}
-          total={salesSummary.length}
+          total={rentData.length}
           limitOptions={[5,10,15, 20]}
           limit={limit}
           activePage={page}
