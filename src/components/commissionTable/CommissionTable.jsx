@@ -107,32 +107,32 @@ export default function CommissionTable() {
           <Cell dataKey="date" />
         </Column>
 
-        <Column width={150} sortable>
+        <Column width={200} sortable>
           <HeaderCell>Agent</HeaderCell>
           <Cell dataKey="agent" />
         </Column>
 
-        <Column width={160} sortable>
+        <Column width={200} sortable>
           <HeaderCell>Address</HeaderCell>
           <Cell dataKey={"address"}/>
         </Column>
-        <Column width={100} flexGrow={1} sortable>
+        <Column width={150} sortable>
           <HeaderCell>Sale Price</HeaderCell>
           <Cell dataKey="salePrice" />
         </Column>
-        <Column width={100} flexGrow={1} sortable>
+        <Column width={150} sortable>
             <HeaderCell>Total Comm.</HeaderCell>
             <Cell dataKey='totalCommission'/>
         </Column>
-        <Column width={100} flexGrow={1} sortable>
+        <Column width={150} sortable>
             <HeaderCell>Trans. Fee</HeaderCell>
             <Cell dataKey='transactionFee'/>
         </Column>
-        <Column width={100} flexGrow={1} sortable>
+        <Column width={150} sortable>
             <HeaderCell>Net Payment</HeaderCell>
             <Cell dataKey='netPayment'/>
         </Column>
-        <Column width={200} flexGrow={1}>
+        <Column width={130} >
           <HeaderCell>Action</HeaderCell>
           <ActionCell dataKey="agent" />
           {/* <Cell>

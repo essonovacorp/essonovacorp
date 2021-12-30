@@ -25,6 +25,7 @@ import pdfIcon from '../../assets/images/pdf.svg';
 
 
 import $ from 'jquery';
+import SalesTable from "../../components/salesTable/SalesTable";
 
 
 
@@ -115,7 +116,8 @@ export default function Sales() {
                     </div>
                     <div className="row mt-4">
                         <div className="col-sm-12">
-                            <div className="table-responsive">
+                            <SalesTable/>
+                            {/* <div className="table-responsive">
                                 <table id="example" class="table table-sm">
                                     <thead>
                                         <tr>
@@ -166,7 +168,7 @@ export default function Sales() {
                                     </tbody>
 
                                 </table>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     {/* <div className="row">

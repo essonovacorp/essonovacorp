@@ -158,6 +158,66 @@ export const salesData = [
     transactionFee: 100,
     agentNetCommission: 500
   },
+  {
+    Date: '11-11-2021',
+    ClosingDate: '01-12-2021',
+    agent: 'Jhon',
+    mls: 250,
+    propertyAddress: 'Mortgage Company Address',
+    salePrice: 12000,
+    otherAgentCommValue: 10,
+    rebateBuyeSeller: 40,
+    transactionFee: 100,
+    agentNetCommission: 500
+  },
+  {
+    Date: '11-11-2021',
+    ClosingDate: '01-12-2021',
+    agent: 'Jhon',
+    mls: 250,
+    propertyAddress: 'Mortgage Company Address',
+    salePrice: 12000,
+    otherAgentCommValue: 10,
+    rebateBuyeSeller: 40,
+    transactionFee: 100,
+    agentNetCommission: 500
+  },
+  {
+    Date: '11-11-2021',
+    ClosingDate: '01-12-2021',
+    agent: 'Jhon',
+    mls: 250,
+    propertyAddress: 'Mortgage Company Address',
+    salePrice: 12000,
+    otherAgentCommValue: 10,
+    rebateBuyeSeller: 40,
+    transactionFee: 100,
+    agentNetCommission: 500
+  },
+  {
+    Date: '11-11-2021',
+    ClosingDate: '01-12-2021',
+    agent: 'Jhon',
+    mls: 250,
+    propertyAddress: 'Mortgage Company Address',
+    salePrice: 12000,
+    otherAgentCommValue: 10,
+    rebateBuyeSeller: 40,
+    transactionFee: 100,
+    agentNetCommission: 500
+  },
+  {
+    Date: '11-11-2021',
+    ClosingDate: '01-12-2021',
+    agent: 'Jhon',
+    mls: 250,
+    propertyAddress: 'Mortgage Company Address',
+    salePrice: 12000,
+    otherAgentCommValue: 10,
+    rebateBuyeSeller: 40,
+    transactionFee: 100,
+    agentNetCommission: 500
+  },
 ];
 
 export const selectData = [

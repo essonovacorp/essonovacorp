@@ -4,6 +4,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import CreateAgentForm from '../../components/createAgent/CreateAgentForm';
 import AllagentTableList from '../../components/allAgentTableList/AllagentTableList';
 import { agentTable } from "../../DummyData"
+import AgentsTableList from '../../components/agentsTableList/AgentsTableList';
 
 
 const Agents = () => {
@@ -46,8 +47,8 @@ const Agents = () => {
                     <div className="row">
                         <div className="col-sm-12">
                        
-                        <AllagentTableList agentTable={agentTable} title="Agents Activity"/>
-
+                        {/* <AllagentTableList agentTable={agentTable} title="Agents Activity"/> */}
+                        <AgentsTableList agentTable={agentTable} title="Agents Activity"/>
                         </div>
                     </div>
                 </div>

@@ -613,6 +613,10 @@ padding: 8px 15px !important;
     white-space: pre-line !important;
     word-wrap: break-word;
 }
+
+.action-btn .rs-table-cell-wrap{
+    display: flex;
+}
 /* Staper */
 .MuiStep-root .Mui-completed > span,
 .css-z7uhs0-MuiStepConnector-line{

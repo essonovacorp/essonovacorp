@@ -117,7 +117,7 @@ export default function SaleSummaryTable() {
           <Cell dataKey="date" />
         </Column>
 
-        <Column width={150} fixed sortable>
+        <Column width={150} sortable>
           <HeaderCell>Closing Date</HeaderCell>
           <Cell dataKey="closingDate" />
         </Column>
@@ -131,24 +131,24 @@ export default function SaleSummaryTable() {
           <HeaderCell>MLS</HeaderCell>
           <Cell dataKey={"MLS"}/>
         </Column>
-        <Column width={100} flexGrow={1} sortable>
+        <Column width={130} sortable>
           <HeaderCell>Sale Price</HeaderCell>
           <Cell dataKey="salePrice" />
         </Column>
-        <Column width={150} flexGrow={1} sortable>
+        <Column width={150} sortable>
             <HeaderCell>Agent Comm. Value</HeaderCell>
             <Cell dataKey='otherAgentCommValue'/>
         </Column>
-        <Column width={100} flexGrow={1} sortable>
-            <HeaderCell>Rebate to buyer/seller</HeaderCell>
+        <Column width={150} sortable>
+            <HeaderCell>Rebate to <br/>buyer/seller</HeaderCell>
             <Cell dataKey='rebateBuyerSeller'/>
         </Column>
-        <Column width={100} flexGrow={1} sortable>
+        <Column width={120} sortable>
             <HeaderCell>Trans. Fee</HeaderCell>
             <Cell dataKey='transactionFee'/>
         </Column>
-        <Column width={100} flexGrow={1} sortable>
-            <HeaderCell>Agent Net Comm.</HeaderCell>
+        <Column width={140} sortable>
+            <HeaderCell>Agent Net <br/>Comm.</HeaderCell>
             <Cell dataKey='agentNetCommission'/>
         </Column>
        

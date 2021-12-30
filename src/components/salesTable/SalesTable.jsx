@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import { rentSummary } from "../../DummyData"
+import { salesData } from "../../DummyData"
 import SearchIcon from '@mui/icons-material/Search';
 import iconPdf from '../../assets/images/pdf.svg';
-import { Input, InputGroup, Table, Pagination, DateRangePicker, Button } from 'rsuite';
+import { Table, Pagination } from 'rsuite';
+import { Input, InputGroup } from 'rsuite';
+import imgEdit from '../../assets/images/edit.svg';
+import imgDelete from '../../assets/images/delete.svg';
+import imgKey from '../../assets/images/fxemoji_key.svg';
+import viewIcon from '../../assets/images/view.svg';
 
 const { Column, HeaderCell, Cell } = Table;
 
@@ -11,7 +16,16 @@ const ActionCell = ({ rowData, dataKey, ...props }) => {
         alert(`id:${rowData[dataKey]}`);
     }
     return (
-        <Cell {...props} className="link-group">
+        <Cell {...props} className="action-btn link-group">
+            <button className='bg-transprent' >
+                <img src={viewIcon} alt="" />
+            </button>
+            <button className='bg-transprent' >
+                <img src={imgEdit} alt="" />
+            </button>
+            <button className='bg-transprent' >
+                <img src={imgDelete} alt="" />
+            </button>
             <button onClick={handleAction} className='bg-transprent' >
                 <img src={iconPdf} alt="" />
             </button>
@@ -19,9 +33,7 @@ const ActionCell = ({ rowData, dataKey, ...props }) => {
     );
 };
 
-
-
-export default function RentSummaryTable() {
+export default function SalesTable() {
     const [sortColumn, setSortColumn] = React.useState();
     const [sortType, setSortType] = React.useState();
     const [loading, setLoading] = React.useState(false);
@@ -33,7 +45,7 @@ export default function RentSummaryTable() {
         setLimit(dataKey);
     };
 
-    const data = rentSummary.filter((v, i) => {
+    const data = salesData.filter((v, i) => {
         const start = limit * (page - 1);
         const end = start + limit;
         return i >= start && i < end;
@@ -70,7 +82,7 @@ export default function RentSummaryTable() {
         }, 500);
     };
     const styles = {
-        width: '500px',
+        width: 300,
         marginBottom: 10
     };
     const CustomInputGroupWidthButton = ({ placeholder, ...props }) => (
@@ -81,22 +93,13 @@ export default function RentSummaryTable() {
             </InputGroup.Button>
         </InputGroup>
     );
-    const btnGoStyle = {
-        width: '100px'
-    };
     return (
         <>
             <div className="reactTable my-4">
-                <hr />
-                <div className="d-md-flex align-items-center text-center">
-                    <strong>Select Date Range :</strong> <DateRangePicker showOneCalendar className='mx-2 my-2 my-md-0' />
-                    <Button appearance="primary" style={btnGoStyle}>Go</Button>
-
-                </div>
-              
-                <hr />
+                <CustomInputGroupWidthButton size="md" placeholder="Search" />
+                <hr className='mb-0' />
                 <Table
-                    wordWrap
+                   wordWrap
                     data={getData()}
                     loading={loading}
                     height={400}
@@ -107,44 +110,62 @@ export default function RentSummaryTable() {
                     loading={loading}
                     onRowClick={data => {
                         console.log(data);
-                    }}>
-                    {/* <Column width={80} align="center" fixed>
-          <HeaderCell>Id</HeaderCell>
-          <Cell dataKey="id" />
-        </Column> */}
+                    }}
+                   
+                    
+                    >
+                   
 
-                    <Column width={150} fixed sortable>
+                    <Column width={130} fixed sortable>
                         <HeaderCell>Date</HeaderCell>
-                        <Cell dataKey="date" />
+                        <Cell dataKey="Date" />
+                    </Column>
+
+                    <Column width={140}sortable>
+                        <HeaderCell>Closing Date</HeaderCell>
+                        <Cell dataKey="ClosingDate" />
                     </Column>
 
                     <Column width={150} sortable>
-                        <HeaderCell>Closing Date</HeaderCell>
-                        <Cell dataKey="closingDate" />
-                    </Column>
-
-                    <Column width={250} sortable>
                         <HeaderCell>Agent</HeaderCell>
                         <Cell dataKey="agent" />
                     </Column>
 
-                    <Column width={150} sortable>
+                    <Column width={100} sortable>
                         <HeaderCell>MLS</HeaderCell>
-                        <Cell dataKey={"MLS"} />
+                        <Cell dataKey={"mls"} />
+                    </Column>
+                    <Column width={200} sortable >
+                        <HeaderCell>Property<br/> Address</HeaderCell>
+                        <Cell dataKey={"propertyAddress"} />
                     </Column>
                     <Column width={150} sortable>
                         <HeaderCell>Sale Price</HeaderCell>
                         <Cell dataKey="salePrice" />
                     </Column>
-                    <Column width={190} sortable>
-                        <HeaderCell>Agent Commission Value</HeaderCell>
-                        <Cell dataKey='agentCommissionValue' />
-                    </Column>
-                    <Column width={200} sortable>
-                        <HeaderCell>Other Agent <br/>Commission Value</HeaderCell>
+                    <Column width={150} sortable>
+                        <HeaderCell>Other Agent <br/> Comm Value</HeaderCell>
                         <Cell dataKey='otherAgentCommValue' />
                     </Column>
-                   
+                    <Column width={150} sortable>
+                        <HeaderCell>Rebate Buye <br/>Seller</HeaderCell>
+                        <Cell dataKey='rebateBuyeSeller' />
+                    </Column>
+                    <Column width={150} sortable>
+                        <HeaderCell>Transaction<br/> Fee</HeaderCell>
+                        <Cell dataKey='transactionFee' />
+                    </Column>
+                    <Column width={200} sortable>
+                        <HeaderCell>Agent Net<br/> Commission</HeaderCell>
+                        <Cell dataKey='agentNetCommission' />
+                    </Column>
+
+
+                    <Column width={200} >
+                        <HeaderCell>Action</HeaderCell>
+                        <ActionCell dataKey="Date" />
+
+                    </Column>
                 </Table>
                 <div style={{ padding: 20 }}>
                     <Pagination
@@ -157,7 +178,7 @@ export default function RentSummaryTable() {
                         maxButtons={5}
                         size="xs"
                         layout={['total', '-', 'limit', '|', 'pager', 'skip']}
-                        total={rentSummary.length}
+                        total={salesData.length}
                         limitOptions={[5, 10, 15, 20]}
                         limit={limit}
                         activePage={page}
