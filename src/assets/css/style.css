@@ -574,25 +574,17 @@ margin: 2rem 0 1rem;
     border: 1.5px solid #C7C7C7;
 }
 
-/* Datatable */
-.dataTables_wrapper .dataTables_paginate .paginate_button{
-padding: 8px 15px !important;
-}
-.dataTables_wrapper .dataTables_paginate .paginate_button.current, 
-.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
-    background: #ccc !important;
-border-radius: 7px;
-color:#fff !important;
-padding: 8px 15px !important;
-}
+/* Profile */
+.adminProfile h4{
+ 
+font-weight: bold;
+font-size: 17px;
+line-height: 16px;
+/* identical to box height, or 94% */
+text-transform: uppercase;
+letter-spacing: 0.1px;
 
-.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
-    background: #ccc !important;
-    border-radius: 7px;
-    color:#fff !important;
-    padding: 8px 15px !important;
 }
-
 .rs-table-row .rs-table-cell{
     background: #ffffff;
   }
@@ -613,7 +605,11 @@ padding: 8px 15px !important;
     white-space: pre-line !important;
     word-wrap: break-word;
 }
-
+.rs-input:disabled{
+    background-color: #AAAAAA !important;
+    color: rgba(0, 0, 0, 0.62) !important;
+    font-weight: bold !important;
+}
 .action-btn .rs-table-cell-wrap{
     display: flex;
 }
@@ -687,4 +683,10 @@ padding: 20px;
 }
 .rs-picker-menu{
     z-index: 1400;
+}
+.rs-uploader-trigger-btn{
+    width: 92px !important;
+    height: 92px !important;
+    border-radius: 500% !important;
+    border:0px !important
 }

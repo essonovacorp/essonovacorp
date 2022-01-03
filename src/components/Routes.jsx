@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import AdminProfile from "../pages/adminProfile/AdminProfile";
 import Agents from "../pages/agents/Agents";
 import Commission from "../pages/commission/Commission";
 import Dashboard from '../pages/dashboard/Dashboard';
@@ -35,6 +36,9 @@ const Routes = () => {
             </Route>
             <Route path="/rent-summary">
                 <RentSummary/>
+            </Route>
+            <Route path="/profile">
+                <AdminProfile/>
             </Route>
         </Switch>
     )

@@ -1,4 +1,5 @@
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { NavLink } from 'react-router-dom';
 import agent from "../../assets/images/topbar-agent/agent.svg";
 
 export default function Topbar() {
@@ -29,9 +30,9 @@ export default function Topbar() {
                             <div className="userProfileAction">
                                 <ul className="list-unstyled">
                                     <li>
-                                        <a href="#" className="profileLink">
-                                        Profile
-                                        </a>
+                                        <NavLink   activeClassName={"active"} to="/profile" className="profileLink">
+                                            Profile
+                                        </NavLink>
                                     </li>
                                     <li >
                                         <a href="#" className="changePasswordLink">
