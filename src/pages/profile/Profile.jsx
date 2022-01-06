@@ -9,7 +9,7 @@ import { selectData } from '../../DummyData';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-export default function AdminProfile() {
+export default function Profile() {
     const breadcrumbs = [
         <Link underline="hover" key="1" color="inherit" href="/">
             Dashboard

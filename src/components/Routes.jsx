@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import AdminProfile from "../pages/adminProfile/AdminProfile";
+import Profile from "../pages/profile/Profile";
 import Agents from "../pages/agents/Agents";
 import Commission from "../pages/commission/Commission";
 import Dashboard from '../pages/dashboard/Dashboard';
@@ -38,7 +38,7 @@ const Routes = () => {
                 <RentSummary/>
             </Route>
             <Route path="/profile">
-                <AdminProfile/>
+                <Profile/>
             </Route>
         </Switch>
     )
