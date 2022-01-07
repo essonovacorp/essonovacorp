@@ -47,9 +47,9 @@ export default function Sidenav() {
                        </NavLink>
                    </li>
                    <li>
-                       <a href="#" className="nav_icon nav_your_plan">
+                         <NavLink activeClassName={"active"} to="/plan"  className="nav_icon nav_your_plan">
                        YOUR PLAN
-                       </a>
+                       </NavLink>
                    </li>
                </ul>
            </div>

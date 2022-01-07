@@ -579,3 +579,29 @@ export const rentData = [
       otherAgentCommValue:'$0.00',
      },
     ];
+
+
+    
+  export const  upgradePlan =[
+    {
+      "label": "Upto 5 agents($20/mo)",
+      "value": "Upto 5 agents($20/mo)",
+      "role": "Master"
+    },
+    {
+      "label": "Upto 20 agents($50/mo)",
+      "value": "Upto 20 agents($50/mo)",
+      "role": "Master"
+    },
+    {
+      "label": "Upto 50 agents($150/mo)",
+      "value": "Upto 50 agents($150/mo)",
+      "role": "Master"
+    },
+    {
+      "label": "Upto 200 agents($200/mo)",
+      "value": "Upto 200 agents($200/mo)",
+      "role": "Master"
+    },
+    
+  ]

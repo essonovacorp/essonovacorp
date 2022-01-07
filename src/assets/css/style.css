@@ -690,3 +690,66 @@ padding: 20px;
     border-radius: 500% !important;
     border:0px !important
 }
+
+/* Plan */
+.planContainer{
+    position: relative;
+}
+.planContainer::after{
+    content: '';
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+
+    background: linear-gradient(262.53deg, #2091F9 26.04%, rgba(32, 145, 249, 0) 107%);
+border-radius: 10px;
+}
+.planContainer::before{
+    content: '';
+        width: 81px;
+        height: 125px;
+        background-image: url(../images/plan_icon.png);
+        background-size: cover;
+        position: absolute;
+        right: 52px;
+        bottom: 52px;
+        z-index: 1;
+}
+.upgradePlan{
+    font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 26px;
+line-height: 33px;
+/* identical to box height */
+
+
+color: #000000;
+margin-right: 15px;
+}
+.planAmount span{
+font-style: normal;
+font-weight: 800;
+font-size: 60px;
+line-height: 60px;
+/* identical to box height, or 138% */
+color: #2091F9;
+letter-spacing: 0.2px;
+}
+.planAmount small{  
+margin: 0px 10px;
+color: #2091F9;
+font-size: 24px;
+line-height: 28px;
+}
+.planList li{
+    width: 50%;
+    margin-bottom: 15px ;
+}
+.planTwo li{
+    margin-bottom: 15px;
+    margin-left: 15px;
+}

@@ -9,6 +9,7 @@ import RentSummary from "../pages/rent/RentSummary";
 import Sales from "../pages/sales/Sales";
 import SaleSummary from "../pages/sales/SaleSummary";
 import Addsales from "./addSales/Addsales";
+import Plan from "../pages/plan/Plan";
 
 const Routes = () => {
     return (
@@ -39,6 +40,9 @@ const Routes = () => {
             </Route>
             <Route path="/profile">
                 <Profile/>
+            </Route>
+            <Route path="/plan">
+                <Plan/>
             </Route>
         </Switch>
     )
